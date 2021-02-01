@@ -1,21 +1,20 @@
 #include <iostream>
-using namespace std; 
 
-int test() {
-    float pi = 3.1415; //float
-    float durchmesser = 0.7;
-    float hoehe = 1.5;
-    float vol = 10;
-    pi = 0.7;
-    char anzahl; 
-    int vol_glas = pi * (durchmesser * durchmesser)/4 * hoehe; 
-    anzahl = vol / vol_glas;
-     cout << vol_glas << "##" << anzahl << " Glaeser koennen gefuellt werden.\n";
-     return 0;
+using namespace std;
+
+int test(string ausgabe) {
+    cout << (ausgabe + "\n");
+    return 0;
 }
 
 int main() {
-    test();
-    cout << "Hello";
+    for (int i = 0; i < 10; i++) {
+        int result = test(string(i));
+        if (result == 0) {
+            cout << "Test worked\n";
+        } else {
+            cout << "something went wrong\n";
+        }
+    }
     return 0;
 }
